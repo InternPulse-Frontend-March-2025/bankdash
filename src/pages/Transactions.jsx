@@ -40,8 +40,8 @@ const Transactions = () => {
           </div>
           <div className="flex flex-col md:flex-row gap-4 md:gap-6">
             {/* Active Card */}
-            <Card className="w-full bg-[#1814f3] rounded-xl">
-              <CardContent className="p-4 md:p-6 text-white">
+            <Card className="w-full">
+              <CardContent className="p-4 md:p-6 text-white bg-[#1814f3] rounded-xl">
                 <div className="flex justify-between mb-6 md:mb-8">
                   <div>
                     <p className="text-xs opacity-80 mb-1">Balance</p>
