@@ -43,59 +43,55 @@ const WeeklyActivity = ({ className = "" }) => {
   return (
     <div className={`${className} flex flex-col`}>
       <CustomHeading title="Weekly Activity" />
-      {/* <div className="w-full h-[calc(100%-30px)] max-w-full rounded-lg"> */}
       {/* Card container with responsive width and height */}
-      <div className="bg-white rounded-xl shadow-lg p-4 w-full h-full">
+      <div className="bg-white rounded-xl shadow-lg p-2 h-full w-full">
         {/* Chart container with responsive dimensions */}
-        <div className="w-full h-full">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart
-              data={data}
-              margin={{
-                top: 10,
-                right: 5,
-                left: 0,
-                bottom: 0,
-              }}
-            >
-              <CartesianGrid strokeDasharray="3 3" vertical={false} />
-              <XAxis
-                dataKey="day"
-                axisLine={false}
-                tickLine={false}
-                tick={{ fill: "#718EBF", fontSize: 12 }}
-              />
-              <YAxis
-                domain={[0, 500]}
-                axisLine={false}
-                tickLine={false}
-                tickCount={6}
-                tick={{ fill: "#718EBF", fontSize: 12 }}
-              />
-              <Tooltip />
-              <Legend
-                content={<CustomLegend />}
-                verticalAlign="top"
-                align="right"
-              />
-              <Bar
-                dataKey="deposit"
-                fill="#1814F3"
-                radius={[4, 4, 4, 4]}
-                barSize={10}
-              />
-              <Bar
-                dataKey="withdraw"
-                fill="#16DBCC"
-                radius={[4, 4, 4, 4]}
-                barSize={10}
-              />
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
+        <ResponsiveContainer width="100%" height="100%">
+          <BarChart
+            data={data}
+            margin={{
+              top: 10,
+              right: 5,
+              left: 0,
+              bottom: 0,
+            }}
+          >
+            <CartesianGrid strokeDasharray="3 3" vertical={false} />
+            <XAxis
+              dataKey="day"
+              axisLine={false}
+              tickLine={false}
+              tick={{ fill: "#718EBF", fontSize: 12 }}
+            />
+            <YAxis
+              domain={[0, 500]}
+              axisLine={false}
+              tickLine={false}
+              tickCount={6}
+              tick={{ fill: "#718EBF", fontSize: 12 }}
+            />
+            <Tooltip />
+            <Legend
+              content={<CustomLegend />}
+              verticalAlign="top"
+              align="right"
+            />
+            <Bar
+              dataKey="deposit"
+              fill="#1814F3"
+              radius={[4, 4, 4, 4]}
+              barSize={10}
+            />
+            <Bar
+              dataKey="withdraw"
+              fill="#16DBCC"
+              radius={[4, 4, 4, 4]}
+              barSize={10}
+            />
+          </BarChart>
+        </ResponsiveContainer>
       </div>
     </div>
-    // </div>
   );
 };
 
