@@ -15,13 +15,13 @@ function Layout() {
 
   return (
     <>
-      <div className="w-screen h-screen flex flex-col bg-gray-fill">
+      <div className="w-screen flex flex-col bg-gray-fill">
         <div className="header-container sm:h-35 md:h-25 w-full flex gap-1">
-          <div className="w-56 bg-white sm:hidden md:flex large-screens-only">
+          <div className="sm:w-1/4 lg:w-1/6 bg-white sm:hidden md:flex large-screens-only">
             {/*Brand logo here */}
             <Logo />
           </div>
-          <div className="w-full bg-white">
+          <div className="w-full sm:w-3/4 lg:w-5/6 bg-white">
             {/*Header here */}
             <Header 
               pageTitle={contentPage} 
@@ -35,10 +35,10 @@ function Layout() {
           </div>
         </div>
         <div className="flex w-full h-full gap-1">
-          <div className="w-56 h-full bg-white sidebar md:flex sm:hidden large-screens-only">
+          <div className="sm:w-1/4 lg:w-1/6 bg-white sidebar md:flex sm:hidden large-screens-only">
             <Navigation viewPage={contentPage} navFunc={setContentPage} />
           </div>
-          <div className="w-full h-full main-content">
+          <div className="w-full sm:w-3/4 lg:w-5/6 main-content">
             {/*Main content here */}
             <Outlet />
           </div>

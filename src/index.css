@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+  --left-width: 230px;
+  --right-width: calc(100vw - var(--left-width))
+}
+
 * {
   font-family: "Inter", san-serif;
 }
@@ -125,6 +130,10 @@
     width: 45px;
     height: 45px;
   }
+
+  .service-largeOnly, .service-xLargeOnly{
+    display: none
+  }
 }
 
 @media screen and (min-width: 600px) and (max-width: 850px) {
@@ -141,5 +150,16 @@
 
   .nav-item {
     padding: 0 15px;
+  }
+
+  .service-largeOnly, .service-xLargeOnly{
+    display: none
+  }
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 1025px){
+  .service-xLargeOnly{
+    display: none
   }
 }
