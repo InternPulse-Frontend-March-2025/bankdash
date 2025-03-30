@@ -1,11 +1,12 @@
 import React from 'react'
-import FinancialCards from '../components/cards/FinancialCards.jsx'
-import LastTransaction from '../components/LastTransaction'
-import DebitCreditOverview from '../components/DebitCreditOverview'
-
+import InvoiceSent from "../components/transaction/InvoiceSent"
+import CardOne from '../components/transaction/CardOne'
 function Accounts() {
   return (
     <div>
+      <CardOne/>
+      <InvoiceSent/>
+
 
       <FinancialCards/>
       <LastTransaction />
