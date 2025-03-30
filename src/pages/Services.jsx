@@ -2,7 +2,7 @@ import React from 'react'
 import ServicesTopCard from '../components/services_backup/ServicesTopCard'
 import ServiceBottomCard from '../components/services_backup/ServiceBottomCard'
 
-function Services() {
+const Services = () => {
   return (
     <div className='p-2'>
       <ServicesTopCard />
@@ -11,4 +11,4 @@ function Services() {
   )
 }
 
-export default Services
+export default Services;

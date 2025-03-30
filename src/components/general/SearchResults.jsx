@@ -63,7 +63,7 @@ function SearchResults({ searchTerm, navFunc, searchToggle, setSearchTerm }) {
       tab: 'Setting',
       destination: '/setting',
       keywords: [
-        'Edit Profile', 'Preferences', 'Security', 'Your Name', 'User Name', 'Email', 'Password',
+        'Edit Profile', 'Preferences', 'Security', 'Your Name', 'User Name', 'Email', 'Password',
         'Date of Birth', 'Present Address', 'Permanent Address', 'City', 'Postal Code', 'Country',
         'Currency', 'Time Zone', 'Notification', 'Two-factor Authentication', 'Change Password'
       ]
