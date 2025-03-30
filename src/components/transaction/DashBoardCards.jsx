@@ -1,8 +1,8 @@
 import React from 'react'
 import { Box, CssBaseline } from '@mui/material'
-import CardOne from '../Component/CardOne'
-import CardTwo from '../Component/CardTwo'
-import RecentTransaction from '../Component/RecentTransaction'
+import CardOne from '../transaction/CardOne'
+import CardTwo from '../transaction/CardTwo'
+import RecentTransaction from '../transaction/RecentTransaction'
 
 export default function DashBoardCards() {
   return (
@@ -12,7 +12,7 @@ export default function DashBoardCards() {
       <Box
         sx={{
           display: 'flex',
-          justifyContent: 'space-between',
+          justifyContent:'space-between',
           flexDirection: { xs: 'column', md: 'row' }, // Column for mobile, row for larger screens
           alignItems: 'flex-start',
           gap: 2, // Add spacing between elements
@@ -35,7 +35,7 @@ export default function DashBoardCards() {
          {/* RecentTransaction Component */}
          <Box
           sx={{
-            width: { xs: '100%', md: '30%' }, // Adjust width for larger screens
+            width: { xs: '100%', md:'70%' }, // Adjust width for larger screens
             marginTop: { xs: 2, md: 0 }, // Reduce margin on mobile screens
           }}
         >

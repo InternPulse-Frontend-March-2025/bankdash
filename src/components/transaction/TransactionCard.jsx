@@ -1,6 +1,6 @@
 import React from 'react'
-import CardOne from './CardOne'
-import CardTwo from './CardTwo'
+import CardOne from '../transaction/CardOne'
+import CardTwo from '../transaction/CardTwo'
 import { Box } from '@mui/material'
 
 export default function TransactionCard() {

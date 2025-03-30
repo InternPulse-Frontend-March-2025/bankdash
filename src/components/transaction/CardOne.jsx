@@ -3,7 +3,7 @@ import { Card, CardContent, Typography, Box } from '@mui/material';
 
 export default function CardOne({tittle = "My cards"}) {
   return (
-    <Box sx={{ minWidth: 320, minHeight: 220, }}>
+    <Box sx={{ maxWidth: 320, minHeight: 220, }}>
       <Typography variant='h6' gutterBottom
        sx={{minHeight:'24px'}}
       > {tittle}</Typography>

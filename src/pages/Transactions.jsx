@@ -1,7 +1,11 @@
 import React from "react";
-
+import TransactionCard from "../components/transaction/TransactionCard"
 const Transactions = () => {
-  return <div>Transactions</div>;
+  return(
+    <div>
+      <TransactionCard/>
+    </div>
+  )
 };
 
 export default Transactions;
