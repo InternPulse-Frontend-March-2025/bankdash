@@ -92,7 +92,7 @@ const Preferences = () => {
               className={`pb-2 px-4 ${activeTab === 'profile' ? 'text-blue-600 border-b-2 border-blue-600 font-medium' : 'text-gray-500'}`}
               onClick={() => handleTabClick('profile')}
             >
-              Edit Profile
+              Edit Profile
             </button>
             <button
               className={`pb-2 px-4 ${activeTab === 'preferences' ? 'text-blue-600 border-b-2 border-blue-600 font-medium' : 'text-gray-500'}`}
