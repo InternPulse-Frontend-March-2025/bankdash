@@ -1,5 +1,5 @@
 import React from 'react'
-import CustomHeading from "./CustomHeading";
+import CustomHeading from "../components/overview/CustomHeading";
 import {
   BarChart,
   Bar,
