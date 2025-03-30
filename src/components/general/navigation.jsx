@@ -14,49 +14,49 @@ function Navigation({ viewPage, navFunc }) {
   const menu = [
     {
       tabTitle: 'Dashboard',
-      destination: '/',
+      destination: '/banking/',
       icon: <BiSolidHome />,
       headerText: 'Overview'
     },
     
     {
       tabTitle: 'Transactions',
-      destination: '/transactions',
+      destination: '/banking/transactions',
       icon: <FaFileInvoiceDollar />,
       headerText: 'Transactions'
     },
 
     {
       tabTitle: 'Accounts',
-      destination: '/accounts',
+      destination: '/banking/accounts',
       icon: <IoPerson />,
       headerText: 'Accounts'
     },
     
     {
       tabTitle: 'Investments',
-      destination: '/investments',
+      destination: '/banking/investments',
       icon: <LuChartNoAxesCombined />,
       headerText: 'Investments'
     },
 
     {
       tabTitle: 'Credit Cards',
-      destination: '/credit_cards',
+      destination: '/banking/credit_cards',
       icon: <BsCreditCardFill />,
       headerText: 'Credit Cards'
     },
     
     {
       tabTitle: 'Loans',
-      destination: '/loans',
+      destination: '/banking/loans',
       icon: <FaHandHoldingUsd />,
       headerText: 'Loans'
     },
 
     {
       tabTitle: 'Services',
-      destination: '/services',
+      destination: '/banking/services',
       icon: <BsTools />,
       headerText: 'Services'
     },
@@ -71,7 +71,7 @@ function Navigation({ viewPage, navFunc }) {
 
     {
       tabTitle: 'Setting',
-      destination: '/setting',
+      destination: '/banking/setting',
       icon: <FaGear />,
       headerText: 'Setting'
     },
