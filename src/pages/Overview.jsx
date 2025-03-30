@@ -1,8 +1,8 @@
 import React from "react";
-import WeeklyActivity from "../components/overview/WeeklyActivity";
-import ExpenseStatistics from "../components/overview/ExpenseStatistics";
+import WeeklyActivity from "../components/WeeklyActivity";
+import ExpenseStatistics from "../components/ExpenseStatistics";
 
-const Home = () => {
+const Overview = () => {
   return (
     <div className="h-screen w-full max-w-[1440px] bg-[#F5F7FA] mx-auto">
       <p className="text-red-600 mb-6">This is the overview page</p>
@@ -14,4 +14,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Overview;
