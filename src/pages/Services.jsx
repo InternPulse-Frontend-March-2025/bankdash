@@ -1,9 +1,13 @@
 import React from "react";
 import { FaHandHoldingUsd, FaBriefcase, FaPiggyBank, FaRegUser, FaShieldAlt } from "react-icons/fa";
+import Cards from "../components/cards/Cards.jsx";
 
 const Services = () => {
   return (
     <div className="p-6">
+      <div>
+        <Cards/>
+      </div>
       <h2 className="text-xl font-semibold mb-6">Bank Services List</h2>
       <table className="w-full border-collapse border border-gray-300 text-sm">
         <tbody>

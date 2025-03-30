@@ -8,7 +8,7 @@ const CreditCards = () => {
     <div>
       <CreditCardCards/>
       <FinalCob />
-      <div className="grid grid-cols-3 gap-6 p-6 bg-slate-50 justify-center">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-slate-50 justify-center">
         <AddCardForm />
         <CardSettings />
       </div>

@@ -6,6 +6,13 @@ function Accounts() {
     <div>
       <CardOne/>
       <InvoiceSent/>
+
+
+      <FinancialCards/>
+      <LastTransaction />
+      
+        <DebitCreditOverview className='sm:col-span-2 h-[285px] md:h-[299px] xl:h-[367px]'/>
+      
     </div>
   )
 }
