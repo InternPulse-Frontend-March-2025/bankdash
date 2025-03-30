@@ -86,7 +86,7 @@ function Navigation({ viewPage, navFunc }) {
             return (
               <NavLink to={item.destination}>
                 <div 
-                  className={`flex justify-start items-center gap-3 h-12 p-3 nav-item ${viewPage === item.headerText ? 'active-tab' : 'nav-text-gray'}`}
+                  className={`flex justify-start items-center gap-3 h-12 py-3 px-4 xl:px-8 nav-item ${viewPage === item.headerText ? 'active-tab' : 'nav-text-gray'}`}
                   onClick={() => {navFunc(item.headerText)}}
                 >
                   <span className="text-2xl">{item.icon}</span>{item.tabTitle}
