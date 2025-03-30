@@ -7,7 +7,7 @@ const AddCardForm = () => {
   const [expirationDate, setExpirationDate] = useState("");
 
   return (
-    <div className="bg-white p-6 rounded-2xl col-span-2 min-w-[325px] md:min-w-[487px] max-w-[730px]">
+    <div className="bg-white p-6 rounded-2xl lg:col-span-2 w-full">
       <h2 className="text-2xl font-bold text-[#333B69] mb-4">Add New Card</h2>
       <p className="text-[#718EBF] font-normal text-base mb-6">
         Credit Card generally means a plastic card issued by Scheduled

@@ -40,16 +40,16 @@ const settings = [
 
 const CardSettings = () => {
   return (
-    <div className="bg-white p-6 rounded-2xl col-span-1 min-w-[325px] md:min-w-[231px] lg:min-w-[350px] max-w-[350px]">
+    <div className="bg-white p-6 rounded-2xl lg:col-span-1">
       <h2 className="text-2xl font-bold text-[#333B69] mb-4">Card Setting</h2>
-      <div className="space-y-4">
+      <div className="space-y-4 lg:space-y-0 xl:space-y-4">
         {settings.map(
           ({ icon: Icon, title, description, bg, iconColor }, idx) => (
-            <div key={idx} className="flex items-center p-4 rounded-lg">
-              <div className={`p-[18px] rounded-[20px] bg-white ${bg}`}>
+            <div key={idx} className="flex items-center p-4 lg:p-1 xl:p-4 rounded-lg">
+              <div className={`p-[18px] lg:p-5 xl:p-[18px] rounded-[20px] bg-white ${bg}`}>
                 <Icon size={24} className={`${iconColor}`} />
               </div>
-              <div className="ml-4">
+              <div className="ml-4 lg:ml-1 xl:ml-4">
                 <h3 className="text-lg font-[500] text-[#232323]">{title}</h3>
                 <p className="text-[#718EBF] font-normal text-sm">{description}</p>
               </div>
