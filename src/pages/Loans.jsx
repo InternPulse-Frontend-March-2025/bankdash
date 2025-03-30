@@ -1,9 +1,11 @@
 import React from 'react'
-import LoanContainer from '../components/LoanContainer'
+import LoanCards from '../components/cards/LoanCards.jsx'
 
 function Loans() {
   return (
-    <LoanContainer />
+    <div>
+      <LoanCards/>
+    </div>
   )
 }
 
