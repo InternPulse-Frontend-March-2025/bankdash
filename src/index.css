@@ -143,3 +143,15 @@
     padding: 0 15px;
   }
 }
+
+/* cardexpense/cardlist */
+
+@media (max-width: 768px) {
+  body,
+  html,
+  .parent-container,
+  .card-list-container,
+  .cards-container {
+    background: transparent !important;
+  }
+}

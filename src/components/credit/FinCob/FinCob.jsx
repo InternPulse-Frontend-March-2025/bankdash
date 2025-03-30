@@ -11,6 +11,7 @@ const FinalCob = () => {
         gap: "0%", // Adds space between the two components
         alignItems: "flex-start", // Aligns them properly at the top
         justifyContent: "center", // Centers them on the page
+        background: "black",
       }}>
       {/* Card Expense Component */}
       <div
@@ -25,7 +26,13 @@ const FinalCob = () => {
       </div>
 
       {/* Card List Component */}
-      <div style={{ flex: 1, maxWidth: "750px", marginRight: "0" }}>
+      <div
+        style={{
+          flex: 1,
+          maxWidth: "750px",
+          marginRight: "0",
+          background: "transparent",
+        }}>
         <CardList />
       </div>
     </div>

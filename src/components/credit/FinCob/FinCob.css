@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   gap: 20px;
   padding: 20px;
+  background: transparent !important;
 }
 
 /* Tablet View (1024px) */
@@ -12,6 +13,7 @@
   .parent-container {
     justify-content: center;
     gap: 15px;
+    background: transparent !important;
   }
 }
 
@@ -23,5 +25,6 @@
     gap: 10px;
     max-width: 100%;
     overflow-x: hidden;
+    background: transparent !important;
   }
 }
