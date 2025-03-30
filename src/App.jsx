@@ -11,12 +11,14 @@ import Services from "./pages/Services"
 import Setting from "./pages/Setting"
 import Loans from "./pages/Loans"
 import Privileges from "./pages/Privileges"
+import LandingPage from "./pages/LandingPage"
 
 function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/banking" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="transactions" element={<Transactions />}/>
           <Route path="accounts" element={<Accounts />}/>
