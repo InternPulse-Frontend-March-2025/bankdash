@@ -1,5 +1,5 @@
 import React from "react";
-import "../index.css"
+import "../../../src/index.css"
 
 function Loans() {
   const loanData = [
