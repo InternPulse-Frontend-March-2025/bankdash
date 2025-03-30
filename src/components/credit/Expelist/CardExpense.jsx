@@ -57,8 +57,8 @@ const CardExpense = () => {
             dataKey="value"
             cx="50%"
             cy="50%"
-            innerRadius={40}
-            outerRadius={60}
+            innerRadius={8}
+            outerRadius={80}
             paddingAngle={5}>
             {data.map((entry, index) => (
               <Cell

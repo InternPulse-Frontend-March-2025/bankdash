@@ -10,6 +10,9 @@
   padding: 20px;
   box-sizing: border-box;
 }
+.Card-list {
+  background: transparent !important;
+}
 
 .card-list-heading {
   font-family: "Inter", sans-serif;
@@ -95,6 +98,11 @@
   .card-list-container {
     padding: 15px;
     margin-top: 15px;
+    background: transparent !important;
+  }
+
+  .cards-container {
+    background: transparent !important;
   }
 
   .card-list-container h2 {
@@ -120,8 +128,20 @@
 }
 
 @media (max-width: 480px) {
+  .card-list-container {
+    background: transparent !important;
+  }
+
+  .cards-container {
+    background: transparent !important;
+  }
+
   .card-details {
     grid-template-columns: 1fr auto;
+  }
+
+  .Card-list {
+    background: transparent !important;
   }
 
   .card-type-detail {
