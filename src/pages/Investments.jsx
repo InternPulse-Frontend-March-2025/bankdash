@@ -10,7 +10,6 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
-import { BarChart, Payments, LocalAtm, Description } from "@mui/icons-material";
 import {
   LineChart,
   Line,
@@ -20,6 +19,14 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+
+// Icon Imports
+import moneyBag from "../assets/images/icons/money-bag.svg";
+import pieChart from "../assets/images/icons/pie-chart 1.svg";
+import repeat from "../assets/images/icons/repeat 1.svg";
+import appleIcon from "../assets/images/icons/apple.svg";
+import samsungMobile from "../assets/images/icons/Google.svg";
+import teslaMotors from "../assets/images/icons/Tesla.svg";
 
 // Sample data for charts
 const yearlyInvestmentData = [
@@ -44,33 +51,6 @@ const monthlyRevenueData = [
   { month: "Oct", revenue: 9000 },
   { month: "Nov", revenue: 8500 },
   { month: "Dec", revenue: 9500 },
-];
-
-const investments = [
-  {
-    name: "Apple Store",
-    category: "E-commerce, Marketplace",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
-    investmentValue: "$54,000",
-    returnValue: "+16%",
-    returnColor: "#22c55e",
-  },
-  {
-    name: "Samsung Mobile",
-    category: "E-commerce, Marketplace",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg",
-    investmentValue: "$25,300",
-    returnValue: "-4%",
-    returnColor: "#ef4444",
-  },
-  {
-    name: "Tesla Motors",
-    category: "Electric Vehicles",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg",
-    investmentValue: "$8,200",
-    returnValue: "+25%",
-    returnColor: "#22c55e",
-  },
 ];
 
 const trendingStocks = [
@@ -120,146 +100,191 @@ export default function BankDashboard() {
       {/* Main Content */}
       <Box sx={{ flexGrow: 1, overflow: "auto" }}>
         {/* Dashboard Content */}
-        <Container maxWidth="xl" sx={{ py: 4 }}>
-          {/* Responsive Icons Section */}
-          <Grid container spacing={2} sx={{ mb: 4 }}>
-            {/* Total Invested Amount */}
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <Card
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  backgroundColor: "#ffffff",
-                  borderRadius: "16px",
-                  p: 2,
-                  boxShadow: 2,
-                  height: "100%",
-                  minHeight: 90,
-                }}
-              >
-                <Box
-                  sx={{
-                    minWidth: 50,
-                    height: 50,
-                    bgcolor: "#22c55e",
-                    borderRadius: "50%",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    mr: 2,
-                    flexShrink: 0,
-                  }}
-                >
-                  <LocalAtm sx={{ color: "#ffffff", fontSize: "28px" }} />
-                </Box>
-                <Box sx={{ overflow: "hidden" }}>
-                  <Typography
-                    variant="body1"
-                    color="#b8c6df"
-                    sx={{ fontWeight: 600, whiteSpace: "nowrap" }}
-                  >
-                    Total Invested
-                  </Typography>
-                  <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-                    $150,000
-                  </Typography>
-                </Box>
-              </Card>
-            </Grid>
+        <Container maxWidth="xl" sx={{ py: 4, px: isMobile ? 2 : 4 }}>
+    {/* Responsive Icons Section */}
+<Grid 
+  container 
+  spacing={2} 
+  sx={{ 
+    mb: 4,
+    justifyContent: isMobile ? "center" : "space-between",
+    maxWidth: isMobile ? "375px" : "none",
+    margin: isMobile ? "0 auto" : "initial"
+  }}
+>
+  {/* Total Invested Amount */}
+  <Grid item xs={12} sm={6} md={4} lg={3}>
+    <Card
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        backgroundColor: "#ffffff",
+        borderRadius: "16px",
+        p: 3,
+        boxShadow: 2,
+        height: "100%",
+        minHeight: 90,
+      }}
+    >
+      <Box
+        sx={{
+          minWidth: 50,
+          height: 50,
+          bgcolor: "#DCFAF8",
+          borderRadius: "50%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          mr: 2,
+          flexShrink: 0,
+        }}
+      >
+        <Box
+          component="img"
+          src={moneyBag}
+          alt="Total Invested"
+          sx={{
+            width: 28,
+            height: 28,
+          }}
+        />
+      </Box>
+      <Box sx={{ overflow: "hidden" }}>
+        <Typography
+          variant="body1"
+          color="#b8c6df"
+          sx={{ fontWeight: 600, whiteSpace: "nowrap" }}
+        >
+          Total Invested
+        </Typography>
+        <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+          $150,000
+        </Typography>
+      </Box>
+    </Card>
+  </Grid>
 
-            {/* Number of Investments */}
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <Card
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  backgroundColor: "#ffffff",
-                  borderRadius: "16px",
-                  p: 2,
-                  boxShadow: 2,
-                  height: "100%",
-                  minHeight: 90,
-                }}
-              >
-                <Box
-                  sx={{
-                    minWidth: 50,
-                    height: 50,
-                    bgcolor: "#ec4899",
-                    borderRadius: "50%",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    mr: 2,
-                    flexShrink: 0,
-                  }}
-                >
-                  <BarChart sx={{ color: "#ffffff", fontSize: "28px" }} />
-                </Box>
-                <Box sx={{ overflow: "hidden" }}>
-                  <Typography
-                    variant="body1"
-                    color="#b8c6df"
-                    sx={{ fontWeight: "bold", whiteSpace: "nowrap" }}
-                  >
-                    Investments
-                  </Typography>
-                  <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-                    1,250
-                  </Typography>
-                </Box>
-              </Card>
-            </Grid>
+  {/* Number of Investments */}
+  <Grid item xs={12} sm={6} md={4} lg={3}>
+    <Card
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        backgroundColor: "#ffffff",
+        borderRadius: "16px",
+        p: 2,
+        boxShadow: 2,
+        height: "100%",
+        minHeight: 90,
+      }}
+    >
+      <Box
+        sx={{
+          minWidth: 50,
+          height: 50,
+          bgcolor: "#FFE0EB",
+          borderRadius: "50%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          mr: 2,
+          flexShrink: 0,
+        }}
+      >
+        <Box
+          component="img"
+          src={pieChart}
+          alt="Investments"
+          sx={{
+            width: 28,
+            height: 28,
+          }}
+        />
+      </Box>
+      <Box sx={{ overflow: "hidden" }}>
+        <Typography
+          variant="body1"
+          color="#b8c6df"
+          sx={{ fontWeight: "bold", whiteSpace: "nowrap" }}
+        >
+          Investments
+        </Typography>
+        <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+          1,250
+        </Typography>
+      </Box>
+    </Card>
+  </Grid>
 
-            {/* Rate of Return */}
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <Card
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  backgroundColor: "#ffffff",
-                  borderRadius: "16px",
-                  p: 2,
-                  boxShadow: 2,
-                  height: "100%",
-                  minHeight: 90,
-                }}
-              >
-                <Box
-                  sx={{
-                    minWidth: 50,
-                    height: 50,
-                    bgcolor: "#3b82f6",
-                    borderRadius: "50%",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    mr: 2,
-                    flexShrink: 0,
-                  }}
-                >
-                  <Payments sx={{ color: "#ffffff", fontSize: "28px" }} />
-                </Box>
-                <Box sx={{ overflow: "hidden" }}>
-                  <Typography
-                    variant="body1"
-                    color="#b8c6df"
-                    sx={{ fontWeight: "bold", whiteSpace: "nowrap" }}
-                  >
-                    Rate of Return
-                  </Typography>
-                  <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-                    +5.80%
-                  </Typography>
-                </Box>
-              </Card>
-            </Grid>
-          </Grid>
+  {/* Rate of Return */}
+  <Grid item xs={12} sm={6} md={4} lg={3}>
+    <Card
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        backgroundColor: "#ffffff",
+        borderRadius: "16px",
+        p: 2,
+        boxShadow: 2,
+        height: "100%",
+        minHeight: 90,
+      }}
+    >
+      <Box
+        sx={{
+          minWidth: 50,
+          height: 50,
+          bgcolor: "#E7EDFF",
+          borderRadius: "50%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          mr: 2,
+          flexShrink: 0,
+        }}
+      >
+        <Box
+          component="img"
+          src={repeat}
+          alt="Rate of Return"
+          sx={{
+            width: 28,
+            height: 28,
+          }}
+        />
+      </Box>
+      <Box sx={{ overflow: "hidden" }}>
+        <Typography
+          variant="body1"
+          color="#b8c6df"
+          sx={{ fontWeight: "bold", whiteSpace: "nowrap" }}
+        >
+          Rate of Return
+        </Typography>
+        <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+          +5.80%
+        </Typography>
+      </Box>
+    </Card>
+  </Grid>
+</Grid>
+
 
           {/* Charts Section */}
-          <Box sx={{ display: "flex", flexDirection: isMobile ? "column" : "row", gap: 4, mb: 4 }}>
-            {/* Yearly Total Investment Title */}
-            <Box sx={{ width: isMobile ? "100%" : "48%" }}>
+          <Box 
+            sx={{ 
+              display: "flex", 
+              flexDirection: isMobile ? "column" : "row", 
+              gap: 4, 
+              mb: 4,
+              pt: 4,
+              pb: 4,
+              maxWidth: isMobile ? "375px" : "none",
+              margin: isMobile ? "0 auto" : "initial"
+            }}
+          >
+            {/* Yearly Total Investment */}
+            <Box sx={{ width: "100%" }}>
               <Typography
                 variant="h4"
                 color="#333b69"
@@ -300,8 +325,8 @@ export default function BankDashboard() {
               </Card>
             </Box>
 
-            {/* Monthly Revenue Title */}
-            <Box sx={{ width: isMobile ? "100%" : "52%" }}>
+            {/* Monthly Revenue */}
+            <Box sx={{ width: "100%" }}>
               <Typography
                 variant="h4"
                 color="#333b69"
@@ -344,77 +369,239 @@ export default function BankDashboard() {
           </Box>
 
           {/* Investments and Stocks Section */}
-          <Grid container spacing={3}>
+          <Box 
+            sx={{ 
+              display: "flex", 
+              flexDirection: isMobile ? "column" : "row", 
+              gap: 4,
+              maxWidth: isMobile ? "375px" : "none",
+              margin: isMobile ? "0 auto" : "initial"
+            }}
+          >
             {/* My Investment Section */}
-            <Grid item xs={12} md={5}>
-              <Typography variant="h6" fontWeight={600} mb={2}>
+            <Box sx={{ width: "100%" }}>
+              <Typography variant="h6" fontWeight={600} mb={2} color="#333b69">
                 My Investment
               </Typography>
               <Box display="flex" flexDirection="column" sx={{ flexGrow: 1 }}>
-                {investments.map((investment, index) => (
-                  <Card
-                    key={index}
+                {/* Apple Store Investment */}
+                <Card
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    p: 2,
+                    borderRadius: 3,
+                    boxShadow: 1,
+                    mb: 2,
+                  }}
+                >
+                  <Box
                     sx={{
+                      width: 50,
+                      height: 50,
+                      bgcolor: "#FFE0EB",
+                      borderRadius: "12px",
                       display: "flex",
                       alignItems: "center",
-                      p: 2,
-                      borderRadius: 3,
-                      boxShadow: 1,
-                      mb: 2,
+                      justifyContent: "center",
+                      mr: 2,
+                      flexShrink: 0,
                     }}
                   >
                     <Box
                       component="img"
-                      src={investment.logo}
-                      alt={investment.name}
-                      sx={{ width: 40, height: 40, mr: 2, flexShrink: 0 }}
+                      src={appleIcon}
+                      alt="Apple Store"
+                      sx={{ 
+                        width: 30, 
+                        height: 30,
+                        objectFit: 'contain'
+                      }}
                     />
-                    <Box flexGrow={1} sx={{ overflow: "hidden" }}>
-                      <Typography fontWeight={600} noWrap>
-                        {investment.name}
-                      </Typography>
-                      <Typography color="gray" fontSize={14} noWrap>
-                        {investment.category}
-                      </Typography>
-                    </Box>
-                    <Box flex={1} textAlign="center" sx={{ px: 1 }}>
-                      <Typography fontWeight={600} noWrap>
-                        {investment.investmentValue}
-                      </Typography>
-                    </Box>
-                    <Box textAlign="right" sx={{ minWidth: 60 }}>
-                      <Typography 
-                        color={investment.returnColor} 
-                        fontSize={14}
-                        noWrap
-                      >
-                        {investment.returnValue}
-                      </Typography>
-                    </Box>
-                  </Card>
-                ))}
+                  </Box>
+                  <Box flexGrow={1} sx={{ overflow: "hidden" }}>
+                    <Typography fontWeight={600} noWrap>
+                      Apple Store
+                    </Typography>
+                    <Typography color="gray" fontSize={14} noWrap>
+                      E-commerce, Marketplace
+                    </Typography>
+                  </Box>
+                  <Box flex={1} textAlign="center" sx={{ px: 1 }}>
+                    <Typography fontWeight={600} noWrap>
+                      $54,000
+                    </Typography>
+                    <Typography color="gray" fontSize={14} noWrap>
+                    Envestment Value
+                    </Typography>
+                  </Box>
+                  <Box textAlign="right" sx={{ minWidth: 60 }}>
+                    <Typography 
+                      color="#22c55e" 
+                      fontSize={14}
+                      noWrap
+                    >
+                      +16%
+                    </Typography>
+                    <Typography color="gray" fontSize={14} noWrap>
+                      Return Value
+                    </Typography>
+                  </Box>
+                </Card>
+
+                {/* Samsung Mobile Investment */}
+                <Card
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    p: 2,
+                    borderRadius: 3,
+                    boxShadow: 1,
+                    mb: 2,
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: 50,
+                      height: 50,
+                      bgcolor: "#E7EDFF",
+                      borderRadius: "12px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      mr: 2,
+                      flexShrink: 0,
+                    }}
+                  >
+                    <Box
+                      component="img"
+                      src={samsungMobile}
+                      alt="Samsung Mobile"
+                      sx={{ 
+                        width: 30, 
+                        height: 30,
+                        objectFit: 'contain'
+                      }}
+                    />
+                  </Box>
+                  <Box flexGrow={1} sx={{ overflow: "hidden" }}>
+                    <Typography fontWeight={600} noWrap>
+                      Samsung Mobile
+                    </Typography>
+                    <Typography color="gray" fontSize={14} noWrap>
+                      E-commerce, Marketplace
+                    </Typography>
+                  </Box>
+                  <Box flex={1} textAlign="center" sx={{ px: 1 }}>
+                    <Typography fontWeight={600} noWrap>
+                      $25,300
+                    </Typography>
+                    <Typography color="gray" fontSize={14} noWrap>
+                      Estimate Value
+                    </Typography>
+                    
+                  </Box>
+                  <Box textAlign="right" sx={{ minWidth: 60 }}>
+                    <Typography 
+                      color="#ef4444" 
+                      fontSize={14}
+                      noWrap
+                    >
+                      -4%
+                    </Typography>
+                    <Typography color="gray" fontSize={14} noWrap>
+                      Return Value
+                    </Typography>
+                  </Box>
+                </Card>
+
+                {/* Tesla Motors Investment */}
+                <Card
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    p: 2,
+                    borderRadius: 3,
+                    boxShadow: 1,
+                    mb: 2,
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: 50,
+                      height: 50,
+                      bgcolor: "#FFF5D9",
+                      borderRadius: "12px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      mr: 2,
+                      flexShrink: 0,
+                    }}
+                  >
+                    <Box
+                      component="img"
+                      src={teslaMotors}
+                      alt="Tesla Motors"
+                      sx={{ 
+                        width: 30, 
+                        height: 30,
+                        objectFit: 'contain'
+                      }}
+                    />
+                  </Box>
+                  <Box flexGrow={1} sx={{ overflow: "hidden" }}>
+                    <Typography fontWeight={600} noWrap>
+                      Tesla Motors
+                    </Typography>
+                    <Typography color="gray" fontSize={14} noWrap>
+                      Electric Vehicles
+                    </Typography>
+                  </Box>
+                  <Box flex={1} textAlign="center" sx={{ px: 1 }}>
+                    <Typography fontWeight={600} noWrap>
+                      $8,200
+                    </Typography>
+                    <Typography color="gray" fontSize={14} noWrap>
+                      Estimate Value
+                    </Typography>
+                  </Box>
+                  <Box textAlign="right" sx={{ minWidth: 60 }}>
+                    <Typography 
+                      color="#22c55e" 
+                      fontSize={14}
+                      noWrap
+                    >
+                      +25%
+                    </Typography>
+                    <Typography color="gray" fontSize={14} noWrap>
+                      Return Value
+                    </Typography>
+                  </Box>
+                </Card>
               </Box>
-            </Grid>
+            </Box>
 
             {/* Trending Stocks Section */}
-            <Grid item xs={12} md={7}>
-              <Typography variant="h6" fontWeight={600} mb={2}>
+            <Box sx={{ width: "100%" }}>
+              <Typography variant="h6" fontWeight={600} mb={2} color="#333b69">
                 Trending Stocks
               </Typography>
               <Card sx={{ borderRadius: 1, boxShadow: 1, p: 2 }}>
                 <Box component="table" width="100%" borderCollapse="collapse">
                   <Box component="thead">
-                    <Box component="tr" bgcolor="#f5f7fa">
+                    <Box component="tr" bgcolor="##FFFFFF" color="#718EBF">
                       <Box 
                         component="th" 
                         textAlign="left" 
                         px={2} 
                         py={1}
                         sx={{ display: isMobile ? "none" : "table-cell" }}
+                        color="#718EBF"
                       >
                         SL No
                       </Box>
-                      <Box component="th" textAlign="left" px={2} py={1}>
+                      <Box component="th" textAlign="left" px={2} py={1} >
                         Name
                       </Box>
                       <Box component="th" textAlign="right" px={2} py={1}>
@@ -460,8 +647,8 @@ export default function BankDashboard() {
                   </Box>
                 </Box>
               </Card>
-            </Grid>
-          </Grid>
+            </Box>
+          </Box>
         </Container>
       </Box>
     </Box>
