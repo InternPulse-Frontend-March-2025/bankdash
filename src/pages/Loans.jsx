@@ -1,8 +1,9 @@
 import React from 'react'
+import LoanContainer from '../components/LoanContainer'
 
 function Loans() {
   return (
-    <div>Loans</div>
+    <LoanContainer />
   )
 }
 
