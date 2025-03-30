@@ -53,8 +53,8 @@ const data = [
 const CustomLegend = (props) => {
     const { payload } = props;
     return (
-      <div className="flex justify-between items-center text-sm mb-2 capitalize">
-        <div>
+      <div className="flex justify-end md:justify-between items-center text-sm mb-2 capitalize">
+        <div className='hidden md:block '>
             <p className='text-[13px] text-[#718EBF]'><span className='text-[#333B69]'>$7,560</span> Debited & <span className='text-[#333B69]'>$5,420</span> Credited in this Week</p>
         </div>
         <div className='flex'>
