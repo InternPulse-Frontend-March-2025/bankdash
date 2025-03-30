@@ -45,7 +45,7 @@ const CardSettings = () => {
       <div className="space-y-4 lg:space-y-0 xl:space-y-4">
         {settings.map(
           ({ icon: Icon, title, description, bg, iconColor }, idx) => (
-            <div key={idx} className="flex items-center p-4 lg:p-1 xl:lg:p-4 rounded-lg">
+            <div key={idx} className="flex items-center p-4 lg:p-1 xl:p-4 rounded-lg">
               <div className={`p-[18px] lg:p-5 xl:p-[18px] rounded-[20px] bg-white ${bg}`}>
                 <Icon size={24} className={`${iconColor}`} />
               </div>
