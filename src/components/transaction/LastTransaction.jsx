@@ -1,8 +1,8 @@
 import React from 'react'
 
-import spotify from '../assets/images/icons/spotify.png'
-import emily from '../assets/images/icons/emily.png'
-import mobileService from '../assets/images/icons/mobile-service.png'
+import spotify from '../../assets/images/icons/spotify.png'
+import emily from '../../assets/images/icons/emily.png'
+import mobileService from '../../assets/images/icons/mobile-service.png'
 
 const transactions = [
     {
