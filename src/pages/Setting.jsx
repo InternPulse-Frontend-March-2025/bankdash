@@ -1,8 +1,11 @@
 import React from 'react'
+import Preferences from '../components/setting/Preferences.jsx'
 
 function Setting() {
   return (
-    <div>Setting</div>
+    <div>
+      <Preferences/>
+    </div>
   )
 }
 
