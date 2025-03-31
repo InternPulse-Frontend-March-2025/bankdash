@@ -19,7 +19,7 @@ export default function RecentTransaction() {
             <ListItemText primary="Deposit from my" secondary="28 January 2021" />
             <ListItemText  
                  primary={
-                    <Typography color='#FF4B4A' variant="body2" sx={{ fontSize: '0.875rem' }}>
+                    <Typography color='#FF4B4A' variant="body2" sx={{ fontSize: '0.875rem' }} >
                       -$5,000
                     </Typography>}/>
           </ListItem>
@@ -34,7 +34,7 @@ export default function RecentTransaction() {
             <ListItemText primary="Deposit from my" secondary="28 January 2021" />
             <ListItemText  
                  primary={
-                    <Typography color='#41D4A8' variant="body2" sx={{ fontSize: '0.875rem' }}>
+                    <Typography color='#41D4A8' variant="body2" sx={{ fontSize: '0.875rem' }} >
                       -$5,000
                     </Typography>
                 }
@@ -51,7 +51,7 @@ export default function RecentTransaction() {
             <ListItemText primary="Deposit from my" secondary="28 January 2021" />
             <ListItemText  
                  primary={
-                    <Typography color='#41D4A8' variant="body2" sx={{ fontSize: '0.875rem' }}>
+                    <Typography color='#41D4A8' variant="body2" sx={{ fontSize: '0.875rem' }} >
                       -$5,000
                     </Typography>
                 }
