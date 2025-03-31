@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, NavLink} from 'react-router-dom';
+
 
 // Simple mock auth service (replace with real backend API in production)
 const mockAuthService = {
@@ -47,9 +48,15 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
+    <div className="min-h-screen flex items-center justify-center bg-blue-300"> 
+      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md px-5">
+        <h2 className="text-3xl font-serif italic font-bold mb-6 text-center mt-4">Sign In</h2>
+        <p className="mt-2 text-sm text-center text-gray-600">
+          If you dont have an account registered?{' '}
+          <a href="/register" className="text-indigo-600 hover:text-indigo-800">
+            Register Here
+          </a>
+        </p>
         
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
@@ -63,6 +70,7 @@ const Login = () => {
               onChange={(e) => setEmail(e.target.value)}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
               required
+              placeholder='Enter your email'
             />
           </div>
 
@@ -77,6 +85,7 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
               required
+              placeholder='Enter your password'
             />
           </div>
 
@@ -91,16 +100,17 @@ const Login = () => {
             disabled={isLoading}
             className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:bg-indigo-400"
           >
-            {isLoading ? 'Logging in...' : 'Login'}
+            {/* {isLoading ? 'Logging in...' : 'Login'} */}
+            <NavLink to='/banking'>Go to Banking</NavLink>
           </button>
         </form>
 
-        <p className="mt-2 text-sm text-center text-gray-600">
+        {/* <p className="mt-5 text-sm text-center text-gray-600">
           Don't have an account?{' '}
           <a href="/register" className="text-indigo-600 hover:text-indigo-800">
             Register
           </a>
-        </p>
+        </p> */}
       </div>
     </div>
   );
