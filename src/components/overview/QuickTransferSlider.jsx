@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Send } from "lucide-react";
 import { FiChevronRight } from "react-icons/fi";
-import teammate1 from '../assets/images/teammates/teammember2.avif';
-import teammate2 from '../assets/images/teammates/teammember7.avif';
-import teammate3 from '../assets/images/teammates/teammember4.avif';
-import teammate4 from '../assets/images/teammates/teammember5.avif';
-import teammate5 from '../assets/images/teammates/teammember6.avif';
-import teammate6 from '../assets/images/teammates/teammember8.avif';
+import teammate1 from '../../assets/images/teammates/teammember2.avif';
+import teammate2 from '../../assets/images/teammates/teammember7.avif';
+import teammate3 from '../../assets/images/teammates/teammember4.avif';
+import teammate4 from '../../assets/images/teammates/teammember5.avif';
+import teammate5 from '../../assets/images/teammates/teammember6.avif';
+import teammate6 from '../../assets/images/teammates/teammember8.avif';
 
 const teamMembers = [
     { name: "Livia Bator", role: "CEO", image: teammate1, bold: true },
