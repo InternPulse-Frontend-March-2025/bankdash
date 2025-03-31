@@ -12,6 +12,7 @@ import Setting from "./pages/Setting"
 import Loans from "./pages/Loans"
 import Privileges from "./pages/Privileges"
 import LandingPage from "./pages/LandingPage"
+import QuickTransferSlider from "./components/overview/QuickTransferSlider"
 
 function App() {
   return (
