@@ -10,8 +10,9 @@ const FinalCob = () => {
         display: "flex",
         gap: "0%", // Adds space between the two components
         alignItems: "flex-start", // Aligns them properly at the top
-        justifyContent: "center", // Centers them on the page
-      }}>
+        justifyContent: "space-between" // Centers them on the page
+      }}
+    >
       {/* Card Expense Component */}
       <div
         style={{
@@ -20,7 +21,8 @@ const FinalCob = () => {
           marginLeft: "0",
           position: "relative",
           left: "2%",
-        }}>
+        }}
+      >
         <CardExpense />
       </div>
 
