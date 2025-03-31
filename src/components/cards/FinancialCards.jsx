@@ -10,7 +10,7 @@ const FinancialCards = () => {
   ];
 
   return (
-    <div className="flex  gap-5 justify-center p-5 max-w-5xl mx-auto">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-5 justify-center p-5 max-w-5xl mx-auto">
       {financialData.map((card, index) => (
         <div
           key={index}
