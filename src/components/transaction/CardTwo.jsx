@@ -1,10 +1,10 @@
 import React from 'react'
-import{ Card, CardContent, Typography, Box } from '@mui/material'
+import{ Card, CardContent, Typography, Box, Button } from '@mui/material'
 
 export default function CardTwo({tittle= "See all"}) {
   return (
-    <Box sx={{minWidth:320, minHeight:220, }}>
-         <Typography variant='h6' gutterBottom sx={{textAlign:{xs:'start',md:'end'},minHeight:'24px'}}> {tittle}</Typography>
+    <Box sx={{maxWidth:320, minHeight:220, }}>
+         <Button variant='text'  sx={{textAlign:{xs:'start',md:'end'},minHeight:'24px',}}> {tittle}</Button>
        <Card
          sx={{
            minWidth: 320,

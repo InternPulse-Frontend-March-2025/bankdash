@@ -3,7 +3,7 @@ import { Typography,List,ListItem,ListItemAvatar,Avatar,ListItemText,Box } from 
 
 export default function RecentTransaction() {
   return (
-    <Box sx={{maxWidth:350,maxHeight:220}}>
+    <Box sx={{maxWidth:320,maxHeight:220}}>
       <Typography variant='h6' gutterBottom> Recent Transaction</Typography>
         <List sx={{ backgroundColor: 'background.paper',borderRadius:4, }}>
           <ListItem>

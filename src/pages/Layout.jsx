@@ -1,5 +1,5 @@
 import { useState, useContext } from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 import Logo from '../components/general/Logo'
 import Navigation from '../components/general/Navigation'
 import Header from '../components/general/Header'
@@ -13,6 +13,51 @@ function Layout() {
   const [showSearchList, setShowSearchList] = useState(false)
   const [showNav, setShowNav ] = useState(false)
 
+  const location = useLocation().pathname
+  
+  let displayTitle
+
+  switch(location){
+    case '/banking':
+      displayTitle = 'Overview';
+      break;
+
+    case '/banking/':
+      displayTitle = 'Overview';
+      break;
+    
+    case '/banking/transactions':
+      displayTitle = 'Transactions';
+      break;
+    
+    case '/banking/accounts':
+      displayTitle = 'Accounts';
+      break;
+    
+    case '/banking/investments':
+      displayTitle = 'Investments';
+      break;
+    
+    case '/banking/credit_cards':
+      displayTitle = 'Credit Cards';
+      break;
+    
+    case '/banking/loans':
+      displayTitle = 'Loans';
+      break;
+    
+    case '/banking/services':
+      displayTitle = 'Services';
+      break;
+    
+    case '/banking/setting':
+      displayTitle = 'Setting';
+      break; 
+    
+  }
+
+
+
   return (
     <>
       <div className="w-screen flex flex-col bg-gray-fill">
@@ -24,7 +69,7 @@ function Layout() {
           <div className="w-full sm:w-3/4 lg:w-5/6 bg-white">
             {/*Header here */}
             <Header 
-              pageTitle={contentPage} 
+              pageTitle={displayTitle} 
               navFunc={setContentPage}
               setShowNav={setShowNav}
               searchTerm={searchTerm} 
@@ -36,7 +81,7 @@ function Layout() {
         </div>
         <div className="flex w-full h-full gap-1">
           <div className="sm:w-1/4 lg:w-1/6 bg-white sidebar md:flex sm:hidden large-screens-only">
-            <Navigation viewPage={contentPage} navFunc={setContentPage} />
+            <Navigation viewPage={displayTitle} navFunc={setContentPage} />
           </div>
           <div className="w-full sm:w-3/4 lg:w-5/6 main-content">
             {/*Main content here */}
@@ -56,7 +101,7 @@ function Layout() {
       <MobileNav
         showNav={showNav}
         setShowNav={setShowNav}
-        viewPage={contentPage}
+        viewPage={displayTitle}
         navFunc={setContentPage} 
       />
     </>

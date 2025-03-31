@@ -10,11 +10,11 @@ const LoanCards = () => {
   ];
 
   return (
-    <div className="flex  gap-5 justify-center p-5 max-w-5xl mx-auto">
+    <div className="flex  overflow-x-auto gap-5 justify-between items-center p-5 max-w-5xl mx-auto">
       {loanData.map((loan, index) => (
         <div
           key={index}
-          className="flex items-center gap-5 bg-white rounded-lg p-6 shadow-md transition-transform transform hover:-translate-y-1 hover:shadow-lg w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xs"
+          className="flex w-60 justify-between items-center gap-5 bg-white rounded-lg p-6 shadow-md  transform hover:-translate-y-1 hover:shadow-lg"
         >
           <div className={`w-14 h-14 flex items-center justify-center rounded-full text-white text-2xl ${loan.bgColor}`}>
             {loan.icon}

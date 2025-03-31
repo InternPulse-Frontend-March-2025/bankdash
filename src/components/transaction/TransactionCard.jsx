@@ -7,11 +7,11 @@ export default function TransactionCard() {
   return (
     <Box sx={{
       display:'flex',
-      flexDirection:'row',
+      justifyContent:'space-between',
+      flexDirection:{xs:'row',md:'row'},
       overflowX:{xs:'auto', md:'hidden'}, // Enable horizontal scrolling
       gap: 2, // Add spacing between cards
       padding: 2,
-      width: '100%',
     }}
       >
       <CardOne/>
