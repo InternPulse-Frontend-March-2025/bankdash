@@ -19,7 +19,7 @@ function Accounts() {
         <CardOne/>
       </Grid>
       <Grid size={{xs:12,md:8}}>
-        <DebitCreditOverview/>
+        <DebitCreditOverview className="h-[285px] md:h-[299px] xl:h-[367px]"/>
       </Grid>
       <Grid size={{xs:12,md:4}}>
         <InvoiceSent/>
